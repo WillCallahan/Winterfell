@@ -15,10 +15,10 @@ class CheckboxInput extends React.Component {
 			this.setState({
 				'checked': !this.state.checked
 			}, () => {
-				this.props.onChange(this.state.checked);
+				this.props.onChange(!!this.state.checked);
 			});
 		} else {
-			this.props.onChange(this.state.checked);
+			this.props.onChange(!!this.state.checked);
 		}
 	}
 
@@ -38,7 +38,7 @@ class CheckboxInput extends React.Component {
 						   aria-labelledby={this.props.labelId}
 						   className={this.props.classes.checkbox}
 						   defaultChecked={this.state.checked}
-						   value={true}
+						   // value={true}
 						   checked={this.state.checked}
 						   required={this.props.required
 							   ? 'required'

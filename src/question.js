@@ -157,7 +157,7 @@ class Question extends React.Component {
     this.handleInputChange.call(
       this,
       this.props.questionId,
-      this.props.input.default
+      this.props.questionAnswers[this.props.questionId] || this.props.input.default
     );
   }
 
